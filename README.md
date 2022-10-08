@@ -2,12 +2,8 @@
 [npm:url]: https://www.npmjs.org/package/react-social-login
 [standard:img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard:url]: http://standardjs.com
-[dependencies:img]: https://david-dm.org/deepakaggarwal7/react-social-login.svg?style=flat-square
-[dependencies:url]: https://github.com/deepakaggarwal7/react-social-login/blob/master/package.json#L33
 [license:img]: https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square
 [license:url]: https://opensource.org/licenses/MIT
-
-![alt text](https://raw.githubusercontent.com/deepakaggarwal7/react-social-login/master/react-social-login-logo.png)
 
 # React Social Login &middot; [![NPM version][npm:img]][npm:url] &middot; [![Standard - JavaScript Style Guide][standard:img]][standard:url] &middot; [![Dependencies][dependencies:img]][dependencies:url] &middot; [![License: MIT][license:img]][license:url]
 
@@ -38,10 +34,6 @@ Below are some links to official scopes guide for a few providers:
 
 - [FACEBOOK](https://developers.facebook.com/docs/facebook-login/permissions/)
 - [GOOGLE](https://developers.google.com/identity/protocols/googlescopes)
-
-## Online demo
-
-See [https://deepakaggarwal7.github.io/react-social-login](https://deepakaggarwal7.github.io/react-social-login).
 
 ## Demo
 
@@ -301,148 +293,6 @@ RSL demo is served over https with `webpack-dev-server`. This is a requirement o
 $ npm run start:insecure
 ```
 
-## FAQs
-
-- How to get a bigger picture in FB?
-  =use **/me/picture?width=999**
-
-## Change Log
-
-**v2.0.0** [26 Feb 2017]
-
-- Use small case for providers
-- Linkedin support added along with previous google and facebook
-- A lot of refactoring done
-- Uses Webpack 2.x
-  **Huge Thanks to Nicolas Goudry for his generous contribution **
-
-**v2.0.1** [24 June 2017] merged pull request [#15](https://github.com/deepakaggarwal7/react-social-login/pull/15)
-
-- Facebook error
-- code styling
-- unnecessary console logs
-- pre-commit lint
-
-**v3.0.0** [30 July 2017] merged pull request [#19](https://github.com/deepakaggarwal7/react-social-login/pull/19)
-
-- Rewrote as HOC
-- Instagram
-- GitHub
-- Auto login
-- Better error handling
-- Various fixes
-
-**v3.1.0** [01 August 2017] merged pull request [#20](https://github.com/deepakaggarwal7/react-social-login/pull/20)
-
-- Amazon
-- https
-
-**v3.2.0** [14 September 2017] 3.2.0
-
-- Custom Google scopes
-- Multiple Google buttons
-- GitHub doc
-
-**v3.2.1** [06 October 2017] React 16, better build, update dep, additions and fixes
-
-- Update React to v16
-- Update all dependencies to latest stable versions
-- Optimize webpack build
-- Return full googleAuthResponse
-- Preserve redirect url query string and hash
-- Cancel loading on componentWillUnmount
-- Various fixes
-
-**v3.3.0** [22 October 2017] Logout, custom scopes and fixes
-
-- Add publicProfileURL for LinkedIn
-- Add logout support
-- Fix wrong GitHub id
-- Add custom scope support (all but LinkedIn)
-- Update documentation
-
-**v3.4.0** [22 October 2017] Fix logout issues, expose wrapped component ref and fixes
-
-- Fix logout issue with Amazon
-- Don’t throw error on Instagram logout (like fake SDK load doesn’t throw)
-- Expose wrapped component ref ([react know issue](https://github.com/facebook/react/issues/4213))
-- Small fixes
-
-**v3.4.1** [08 November 2017] Fix logout issues, adds SSR support and fixes
-
-- Fix unknown prop `triggerLogout` forwarded to wrapped component
-- Server-side rendering support
-- Small fixes
-- Update README to explain how logout is implemented in demo
-
-**v3.4.2** [26 December 2017] Fix SSR, refs and update build
-
-- Fixes url parser when window is undefined (SSR fix)
-- Don’t use refs on stateless components
-- Update build system (`babel-preset-env`, updated dependencies, lighter npm package)
-
-**v3.4.3** [23 December 2018] merged pull request [#112](https://github.com/deepakaggarwal7/react-social-login/pull/112)
-
-- Github ID now avilable (Thanks to [MuhamadOmr](https://github.com/deepakaggarwal7/))
-
-**v3.4.5** [25 Sep 2019] merged pull request [#135](https://github.com/deepakaggarwal7/react-social-login/pull/135)
-
-- Types added (Thanks to [Daria Moreno-Gogoleva](https://github.com/iwanttobealight))
-
-**v3.4.6** [30 Oct 2019] merged pull request, logo added [#143](https://github.com/deepakaggarwal7/react-social-login/pull/143)
-
-- Example button fixed(Thanks to [https://github.com/xzessmedia](https://github.com/xzessmedia))
-
-**v3.4.7** [07 May 2020] Fb version upgrade, more control on github scopes
-
-- [#142](https://github.com/deepakaggarwal7/react-social-login/pull/142) fixed! Thanks to [John](https://github.com/johndavedecano)
-- **Github users** - Earlier if any github scope was specified, it was concatenated with the default user scope. However, [csweaver](https://github.com/csweaver) raised a good point in bug [#95](https://github.com/deepakaggarwal7/react-social-login/pull/95) and there was a good solution from [Lennart](https://github.com/lennartkramer1988) which is implemented. Thanks to them!
-- [#140](https://github.com/deepakaggarwal7/react-social-login/pull/140) Fixed Move react and blueprint dependencies to peer. Thanks to [Oumar](https://github.com/wattazoum)
-
-**v3.4.8** [07 July 2020] Gender pulled for Google
-
-- [#163](https://github.com/deepakaggarwal7/react-social-login/pull/163) fixed! Thanks to [Tanya](https://github.com/TanyaTPG)
-
-**v3.4.9** [03 August 2020] types included in dist and example functional component added
-
-**v3.4.10** [30 September 2020] types included in dist and example functional
-
-- Fixes #61 - Button shows without sdk getting loaded
-- Fixes #173 - Fb demo app broken
-
-**v3.4.13** [06 March 2021] onInternetFailure, explicit FB version, Webpack
-
-- Fixes #55 - Button shows without sdk getting loaded
-- Fixes #170 - Facebook SDK upgraded to v5.0. Can be overriden using version prop.
-- Fixes #180 - README.md updated to remove triggerLogin prop warning
-- Webpack issues fixed
-- Fixes #191 - use this instead of 3.4. 12 if you are using nextjs
-
-**v3.4.14** [25 Jul 2021] merged [pr/122](https://github.com/deepakaggarwal7/react-social-login/commit/095041d34f66145fdf6bfbd53f930bc33b29dbcf)
-
-- Fixes #105,109 - User closes login popup handled
-
-**v3.4.15** [26 Dec 2021] merged [pr/219](https://github.com/deepakaggarwal7/react-social-login/pull/219)
-
-- Ability to add optional loader component. Thanks to [Kartik](https://github.com/karthikdivi)
-
-## Tests
-
-TBD
-
-## Main contributors
-
-- [Deepak Aggarwal][ghdeepak]
-- [Nicolas Goudry][ghngoudry]
-
-## Kind contributors
-
-- Kamran Ahmed : custom Google scopes
-- Adrien Cohen : multiple Google buttons
-- Jason Loo : full google auth response
-- Andri Janusson : LinkedIn public profile URL
-- Adrien Pascal : SSR support
-
 [demo]: https://localhost:8080
 [findmyappid]: #find-my-appid
 [fb4devdoc]: https://developers.facebook.com/docs/apps/register
@@ -457,11 +307,4 @@ TBD
 [githubspecifics]: #github-specifics
 [amazondoc]: https://developer.amazon.com/public/apis/engage/login-with-amazon/docs/register_web.html
 [googlescopes]: https://developers.google.com/identity/protocols/googlescopes
-[ghngoudry]: https://github.com/nicolas-goudry
-[ghdeepak]: https://github.com/deepakaggarwal7
-[democontainer]: https://github.com/deepakaggarwal7/react-social-login/blob/master/demo/containers/demo.js
-[usercardcomponent]: https://github.com/deepakaggarwal7/react-social-login/blob/master/demo/components/userCard.js
-[logoutstep1]: https://github.com/deepakaggarwal7/react-social-login/blob/master/demo/containers/demo.js#L73
-[logoutstep2]: https://github.com/deepakaggarwal7/react-social-login/blob/master/demo/containers/demo.js#L62
-[logoutstep3]: https://github.com/deepakaggarwal7/react-social-login/blob/master/demo/components/userCard.js#L121
-[logoutstep4]: https://github.com/deepakaggarwal7/react-social-login/blob/master/demo/containers/demo.js#L66
+
